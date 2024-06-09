@@ -1,8 +1,8 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:interview_demo/modules/static_pages/screens/home_screen.dart';
-import 'package:interview_demo/modules/static_pages/screens/search_screen.dart';
+import 'package:dribble_demo/modules/static_pages/screens/home_screen.dart';
+import 'package:dribble_demo/modules/static_pages/screens/search_screen.dart';
 
 void main() {
   runApp(const MyApp());

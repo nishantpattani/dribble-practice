@@ -1,4 +1,4 @@
-package com.example.interview_demo
+package com.example.dribble_demo
 
 import io.flutter.embedding.android.FlutterActivity
 
