@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -63,9 +62,6 @@ class _HomeScreenState extends State<HomeScreen>
     Future.delayed(
       const Duration(milliseconds: 200),
       () => _animationController.forward(),
-    );
-    _buyCounterAnimation.addListener(
-      () => log('counter animation ${_buyCounterAnimation.value}'),
     );
   }
 
