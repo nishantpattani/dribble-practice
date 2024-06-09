@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:interview_demo/modules/static_pages/screens/home_screen.dart';
+import 'package:interview_demo/modules/static_pages/screens/search_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -55,9 +56,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 return MaterialPageRoute(
                   builder: (context) => const HomeScreen(),
                 );
+              case 'search':
               default:
                 return MaterialPageRoute(
-                  builder: (context) => const HomeScreen(),
+                  builder: (context) => const SearchScreen(),
                 );
             }
           },
@@ -88,9 +90,15 @@ class _MyHomePageState extends State<MyHomePage> {
                       onTap: () => setState(() {
                         log('calling set state');
                         selectedIndex = index;
-                        if (index == 2) {
-                          _navigatorKey.currentState
-                              ?.pushReplacementNamed('home');
+                        switch (index) {
+                          case 2:
+                            _navigatorKey.currentState
+                                ?.pushReplacementNamed('home');
+                            break;
+                          case 0:
+                            _navigatorKey.currentState
+                                ?.pushReplacementNamed('search');
+                            break;
                         }
                       }),
                       child: AnimatedContainer(
